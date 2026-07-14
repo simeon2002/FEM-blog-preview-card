@@ -1,0 +1,118 @@
+/* ROOT FONT SIZE */
+html {
+  font-size: 62.5%; /*10px*/
+}
+
+/* Design system */
+/* spacing system */
+/* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+:root {
+  --clr-primary: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-slate-500: hsl(0, 0%, 42%);
+  --clr-slate-950: hsl(0, 0%, 7%);
+
+  --font-size-body: 1.6rem;
+  --font-size-primary-heading: 2rem;
+  --font-weight-normal: 500;
+  --font-weight-bold: 800;
+}
+
+/* RESET STYLES */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem var(--clr-primary);
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-size: clamp(1.4rem, 1.36rem + 0.125vw, var(--font-size-body));
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-primary);
+}
+
+/**************************/
+/* REUSABLE COMPONENTS */
+/**************************/
+
+/* BLOG COMPONENT */
+.blog-card {
+  width: min(90%, 35rem);
+  background-color: var(--clr-white);
+  padding: 2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0.4rem 0.4em 0 0.4rem var(--clr-slate-950);
+}
+.blog-card__img {
+  width: 100%;
+  border-radius: 0.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.blog-card__tag {
+  display: inline-block;
+  /* font-size: var(--font-size-body); */
+  color: var(--clr-slate-950);
+  background-color: var(--clr-primary);
+  padding: 0.4rem 0.8rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1.6rem;
+}
+/* .blog-card__text-box */
+.blog-card__publish-date {
+  /* font-size: var(--font-size-body); */
+  color: var(--clr-slate-950);
+  margin-bottom: 1.6rem;
+}
+
+.blog-card__title {
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.blog-card__description {
+  color: var(--clr-slate-500);
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+.card__author {
+  font-style: normal;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.blog-card__author-img {
+  width: 2.4rem;
+}
+.blog-card__author-name {
+  font-weight: var(--font-weight-bold);
+}
+
+.link:link,
+.link:visited {
+  color: var(--clr-slate-950);
+  text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+  color: var(--clr-primary);
+}
+
+.heading-primary {
+  font-size: clamp(1.8rem, 1.76rem + 0.125vw, var(--font-size-primary-heading));
+}
